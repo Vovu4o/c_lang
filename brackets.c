@@ -18,11 +18,12 @@ void count_brackets_in_file(const char *filename) {
         } else if (ch == '}' || ch == ')' || ch == ']') {
             open_count--;
         }
+	   if (open_count < 0) break;
     }
 
     fclose(file);
     
-    if (open_count < 0) open_count *= -1; 
+    //if (open_count < 0) open_count *= -1; 
     printf("Файл: %s | Скобок: %d ", filename, open_count);
     if (open_count != 0) printf("В файле лишние скобки!\n");
     else printf("Лишних скобок нет.\n");
