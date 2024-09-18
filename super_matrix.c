@@ -6,6 +6,7 @@
 
 #define SIZE 3  // Размер матриц (например, 3x3)
 
+
 // Функция для вывода матрицы
 void print_matrix(int (*matrix)[SIZE]) {
     for (int i = 0; i < SIZE; i++) {
